@@ -10,13 +10,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wahabtaofeeqo\\TodoApi\\TodoServiceProvider"
+                "Wahabtaofeeqo\\TodoApi\\Providers\\TodoServiceProvider"
             ]
         }
     },
     "authors": [
         {
-            "name": "Taofeek",
+            "name": "Wahab Taofeek",
             "email": "taofeekolamilekan218@gmail.com"
         }
     ],
