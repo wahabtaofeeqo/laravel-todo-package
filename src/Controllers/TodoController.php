@@ -1,6 +1,6 @@
 <?php
 
-namespace WahabTaofeeqo\TodoApi\Controllers;
+namespace Wahabtaofeeqo\TodoApi\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
