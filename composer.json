@@ -1,0 +1,24 @@
+{
+    "name": "wahabtaofeeqo/todo-api",
+    "description": "API to perform crud operations on a Todo app",
+    "autoload": {
+        "psr-4": {
+            "Wahabtaofeeqo\\TodoApi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wahabtaofeeqo\\TodoApi\\TodoServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Taofeek",
+            "email": "taofeekolamilekan218@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
