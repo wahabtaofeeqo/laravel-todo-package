@@ -1,5 +1,6 @@
 {
     "name": "wahabtaofeeqo/todo-api",
+    "type": "library",
     "description": "API to perform crud operations on a Todo app",
     "autoload": {
         "psr-4": {
