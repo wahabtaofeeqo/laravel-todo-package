@@ -4,29 +4,40 @@ namespace Wahabtaofeeqo\TodoApi\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Validator;
 
 class TodoController {
 
     public function index(Request $request)
     {
-        return json_encode([
+        $response = Http::get('https://crudcrud.com/api/ffe3bb5eb6054521b261efb70d3dc514/tasks');
+        return response([
             'status' => true,
-            'data' => []
+            'message' => 'Tasks',
+            'data' => $response->object()
         ]);
     }
 
     public function store(Request $request)
     {
-        # code...
-    }
+        $validator = Validator::make($request->all(), [
+            'task' => 'required|string',
+            'description' => 'required|string'
+        ]);
 
-    public function show(Request $request, $id)
-    {
-        # code...
-    }
+        if ($validator->fails()) {
+            return response([
+                'status' => false,
+                'message' => 'Validation error',
+                'error' => $validator->errors()
+            ], 400);
+        }
 
-    public function destroy(Request $request)
-    {
-        # code...
+        $response = Http::post('https://crudcrud.com/api/ffe3bb5eb6054521b261efb70d3dc514/tasks', $request->all());
+        return response([
+            'status' => true,
+            'message' => 'Task added successfully',
+            'data' => $response->object()
+        ]);
     }
 }

@@ -4,7 +4,8 @@
     "description": "API to perform crud operations on a Todo app",
     "autoload": {
         "psr-4": {
-            "Wahabtaofeeqo\\TodoApi\\": "src/"
+            "Wahabtaofeeqo\\TodoApi\\": "src/",
+            "Wahabtaofeeqo\\TodoApi\\Tests": "tests/"
         }
     },
     "extra": {
